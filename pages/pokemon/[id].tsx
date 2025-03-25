@@ -70,7 +70,8 @@ export default function PokemonDetail({ pokemon }: { pokemon: PokemonDetail }) {
 // Dynamic routing
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20");
-  const data = await res.json();
+  const data: { results: { name: string; url: string }[] } = await res.json();
+
 
   const paths = data.results.map((el, index) => ({
     params: { id: String(index + 1) },
