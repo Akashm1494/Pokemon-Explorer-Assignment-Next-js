@@ -1,9 +1,20 @@
 import { GetStaticProps, GetStaticPaths } from "next";
+import Image from "next/image";
 
-export default function PokemonDetail({ pokemon }: { pokemon: any }) {
+type PokemonDetail = {
+  name: string;
+  sprites: { front_default: string };
+  abilities: { ability: { name: string } }[];
+  types: { type: { name: string } }[];
+  stats: { stat: { name: string }; base_stat: number }[];
+  moves: { move: { name: string } }[];
+};
+
+export default function PokemonDetail({ pokemon }: { pokemon: PokemonDetail }) {
   return (
     <div className="container mx-auto p-6 flex flex-col md:flex-row items-center justify-center gap-8 mt-10">
-      <img src={pokemon.sprites.front_default} alt={pokemon.name} className="w-80 h-80 object-contain"/>
+      <Image src={pokemon.sprites.front_default} alt={pokemon.name} width={200} height={200} layout="intrinsic" />
+
       <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6 text-center">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
           {pokemon.name.toUpperCase()}
