@@ -1,7 +1,5 @@
 # Akashm1494-Pokemon-Explorer-Assignment-Next-js
 
-# Pokémon Explorer - Next.js
-
 A Pokémon detail page built with **Next.js** and **Tailwind CSS**, fetching data from **PokéAPI**.
 
 ## Features
