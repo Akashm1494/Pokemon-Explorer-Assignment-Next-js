@@ -72,7 +72,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20");
   const data = await res.json();
 
-  const paths = data.results.map((_, index) => ({
+  const paths = data.results.map((el, index) => ({
     params: { id: String(index + 1) },
   }));
 
