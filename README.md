@@ -1,9 +1,9 @@
 # Akashm1494-Pokemon-Explorer-Assignment-Next-js
 
-A Pokémon detail page built with **Next.js** and **Tailwind CSS**, fetching data from **PokéAPI**.
+A Pokemon detail page built with **Next.js** and **Tailwind CSS**, fetching data from **PokéAPI**.
 
 ## Features
-- Displays Pokémon **image, abilities, types, stats, and moves**.
+- Displays Pokemon **image, abilities, types, stats, and moves**.
 - Optimized performance using Next.js Static Generation (SSG).
 - Fully **responsive** design with Tailwind CSS.
 - Easy deployment with Vercel.
@@ -47,10 +47,7 @@ npm install -g vercel
 ## Technologies Used
 - **Next.js** - React framework for static & server rendering.
 - **Tailwind CSS** - Utility-first CSS framework.
-- **PokéAPI** - Fetches Pokémon data.
-
-## License
-This project is open-source and free to use.
+- **PokéAPI** - Fetches Pokemon data.
 
 ## Contributing
 Fork the repo, open issues, or submit pull requests.
