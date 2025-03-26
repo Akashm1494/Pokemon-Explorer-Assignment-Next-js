@@ -57,5 +57,5 @@ Fork the repo, open issues, or submit pull requests.
 
 ### Live Demo
 Once deployed, update this section with your Vercel live link:
-[Live Demo](https://pokemon-explorer.vercel.app)
+[Live Demo](https://pokemon-explorer-assignment-next-js.vercel.app/)
 

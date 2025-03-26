@@ -12,6 +12,7 @@ export default function Home({ pokemons }: { pokemons: Pokemon[] }) {
   const [isSearch, setIsSearch] = useState<string>("");
 
   const filteredPokemons = pokemons.filter((pokemon) =>
+    // console.log("pokemon",pokemon);
     pokemon.name.toLowerCase().includes(isSearch.toLowerCase())
   );
 
