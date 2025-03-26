@@ -67,7 +67,7 @@ export default function PokemonDetail({ pokemon }: { pokemon: PokemonDetail }) {
   );
 }
 
-// Dynamic routing
+// // Dynamic routing
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20");
   const data: { results: { name: string; url: string }[] } = await res.json();
@@ -80,9 +80,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-// Fetch Pokemon data based on ID
-export const getStaticProps: GetStaticProps = async ({ params }: { params?: { id: string } }) => {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params?.id}`);
+// //data based on ID
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (!params || !params.id) {
+    return { notFound: true };
+  }
+
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}`);
   const pokemon: PokemonDetail = await res.json();
 
   return {
